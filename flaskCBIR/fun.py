@@ -105,7 +105,7 @@ def get_preditction(img_url):
     print("--------------------------------------------------")
 
     # read and show query image
-    basepath = os.path.dirname(__file__)  # 当前文件所在路径
+    basepath = os.path.dirname(__file__)  
     queryDir = img_url
     queryImg = mpimg.imread(queryDir)
 
@@ -158,8 +158,5 @@ def about():
 	return "<h1>coolkarni about<h1>"
 
 if __name__=="__main__":
-    #app.secret_key = 'super secret key'
-    #app.config['SESSION_TYPE'] = 'filesystem'
-    #sess.init_app(app)
-    app.debug = True
+
     app.run(debug=True)
