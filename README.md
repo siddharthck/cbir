@@ -7,11 +7,14 @@ web framework: Flask
 
 dependencies  : see tensorflow.yml file.
 
-dataset used : caltech256 (please download from oficial website)
+dataset used : caltech256 (please download from oficial website:http://www.vision.caltech.edu/Image_Datasets/Caltech101/)
 
 how to execute :
 
 open CBIR2.pynb file in jupyter notebook. (make sure u are using python which has tensorflow installed)
+
+Follow instructions given in pynb file itself. 
+
 
 
 how to run server?
