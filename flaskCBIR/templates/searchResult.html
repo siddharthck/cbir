@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+<br><br>
+<div class="container-fluid">
+<div class="row">	
+	<h1 class="mx-auto text-white">Welcome to Crocodile image search engine !</h1>
+        <br><br>
+    </div>
+    <br><br><br>
+<div class="row">
+	<div class="mx-auto">
+	<form  action="" enctype='multipart/form-data' method="POST">
+	  <div class="form-group">
+	  	<div class="row">
+	  		<div class="mx-auto">
+	  		<div class="col-md-12">
+	  		
+	    <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+	  		</div>
+	  		<br>
+	  		<div class="col-md-12"><button type="submit" class="btn btn-light btn-lg"> Search images </button>
+	  		</div></div>
+	  	</div>
+	    
+	    
+	    
+</div>
+	  
+	</form></div>
+</div>
+ </div>
+<br><br><br><br>
+<div class="row"><div class="text-white"><h3 >Input image</h3><br>
+	<span class="border border-dark"><img src="{{url_for('send_image', filename=upload_image )}}" width="150" height="150"/>	</div></div></span>
+    
+
+
+        
+
+<br><br><br><br><br><br><br><br>
+
+  <h3>Search Results </h3><br><br>
+  <div class="brick-wall" id="demo">
+
+  	<div class="row">
+ 
+
+
+
+  	{% for i in range(0,length) %}
+  	
+
+  	{% if i%3==0 %}
+  		</div>
+  		<br><br>
+  		<div class="row">
+
+  	{% endif %}
+  	 <div class="col-sm-4">
+  	
+  	<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=" {{url_for('send_image', filename=images[i].decode('utf-8'))}}" alt="Card image cap">
+  <div class="card-body">
+    <a href="{{url_for('description')}}"><h5 class="card-title"> image name :{{ images[i].decode('utf-8') }} </h5></a>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+</div>
+  	</div>
+  	{% endfor %}
+	
+</div>
+
+{% endblock content%}
